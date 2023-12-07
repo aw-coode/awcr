@@ -1,7 +1,7 @@
 import telebot
-from telebot.types import *
-from database_main import *
-from functions_to_my_bots import *
+from telebot.types import 
+from database_main import 
+from functions_to_my_bots import 
 
 
 
