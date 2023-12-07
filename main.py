@@ -1,27 +1,27 @@
 import telebot, time, datetime, random
-from telebot.types import *
-from database_main import *
+from telebot.types import 
+from database_main import 
 from telebot.handler_backends import ContinueHandling
 import random, os, config
-from repl_0 import *
-from performance_bot_private import *
-from Local_replies import *
-from Public_response_channel import *
-from cmdGbot import *
-from gamesBot import *
+from repl_0 import 
+from performance_bot_private import 
+from Local_replies import 
+from Public_response_channel import 
+from cmdGbot import 
+from gamesBot import 
 
 bot = telebot.TeleBot(config.Token)
 insert_devloper_id()
 insert_bot_name()
-from functions_to_my_bots import *
+from functions_to_my_bots import 
 
-from Lock_and_unlock_commands import *
+from Lock_and_unlock_commands import 
 
 from Upload_and_download_commands import *
 
-from Identification_id import *
+from Identification_id import 
 
-from Bot_join_commands import *
+from Bot_join_commands import 
 
 
 @bot.message_handler(chat_types=["supergroup"])
@@ -56,7 +56,7 @@ def VBN(message: Message):
     return ContinueHandling()
 
 
-from Cick_Mute_Block import *
+from Cick_Mute_Block import 
 
 
 @bot.message_handler(content_types=["text"], chat_types=["supergroup"])
