@@ -1,35 +1,34 @@
-import telebot time datetime random
-from telebot.types import 
-from database_main import 
+import telebot
+import time
+import datetime
+import random
+import os
+import config
+from telebot.types import *
+from database_main import *
 from telebot.handler_backends import ContinueHandling
-import random os config
-from repl_0 import 
-from performance_bot_private import 
-from Local_replies import 
-from Public_response_channel import 
-from cmdGbot import 
-from gamesBot import 
+from repl_0 import *
+from performance_bot_private import *
+from Local_replies import *
+from Public_response_channel import *
+from cmdGbot import *
+from gamesBot import *
+from functions_to_my_bots import *
+from Lock_and_unlock_commands import *
+from Upload_and_download_commands import *
+from Identification_id import *
+from Bot_join_commands import *
+from Cick_Mute_Block import *
 
-bot = telebot.TeleBot config.Token
+bot = telebot.TeleBot(config.Token)
 insert_devloper_id()
 insert_bot_name()
-from functions_to_my_bots import 
-
-from Lock_and_unlock_commands import 
-
-from Upload_and_download_commands import *
-
-from Identification_id import 
-
-from Bot_join_commands import 
-
 
 @bot.message_handler(chat_types=["supergroup"])
 def Singin_use1r(message: Message):
     Sigin_user(message)
     update_user(message.chat.id, message.from_user.id, msgs=1)
     return ContinueHandling()
-
 
 @bot.message_handler(
     chat_types=["supergroup"],
@@ -49,15 +48,10 @@ def sendMedia_gr(message: Message):
         Is_not_member(message)
     return ContinueHandling()
 
-
 @bot.message_handler(chat_types=["supergroup"])
 def VBN(message: Message):
     Replies_s1(message)
     return ContinueHandling()
-
-
-from Cick_Mute_Block import 
-
 
 @bot.message_handler(content_types=["text"], chat_types=["supergroup"])
 def Disable_and_activate(message: Message):
@@ -88,7 +82,7 @@ def Disable_and_activate(message: Message):
                     usnm = f'<a href="tg://user?id={ADMIN.id}">{ADMIN.first_name}</a>'
                     bot.send_message(
                         chat_id=chID,
-                        text=f"تم تفعيل البوت في المجموعه \n تم التفعيل بواسطه: {usnm}",
+                        text=f"تم تفعيل البوت في المجموعة \n تم التفعيل بواسطة: {usnm}",
                         parse_mode="HTML",
                         reply_to_message_id=message.id,
                     )
@@ -100,23 +94,22 @@ def Disable_and_activate(message: Message):
                     usnm = f'<a href="tg://user?id={ADMIN.id}">{ADMIN.first_name}</a>'
                     bot.send_message(
                         chat_id=IsDevloper(),
-                        text=f" تم تفعيل البوت في {grnm} \n  تم تفعيل بواسطه: {usnm}",
+                        text=f" تم تفعيل البوت في {grnm} \n  تم تفعيل بواسطة: {usnm}",
                         parse_mode="HTML",
                         disable_web_page_preview=True,
                     )
                     insert_group(message.chat.id)
                     Automatic_lift(message.chat.id)
-
                 else:
                     bot.send_message(
                         chat_id=message.chat.id,
-                        text="عذرا, يجب اعطائي كافه الصلاحيات !",
+                        text="عذراً، يجب إعطائي كافة الصلاحيات!",
                         parse_mode="HTML",
                     )
             else:
                 bot.send_message(
                     chat_id=message.chat.id,
-                    text=f"⌔︙ تم تفعيلها مسبقا",
+                    text=f"⌔︙ تم تفعيلها مسبقاً",
                     parse_mode="HTML",
                 )
         else:
