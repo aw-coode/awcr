@@ -1,8 +1,8 @@
-import telebot, time, datetime, random
+import telebot time datetime random
 from telebot.types import 
 from database_main import 
 from telebot.handler_backends import ContinueHandling
-import random, os, config
+import random os config
 from repl_0 import 
 from performance_bot_private import 
 from Local_replies import 
