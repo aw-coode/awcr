@@ -1,7 +1,7 @@
 {
   "name": "your-app-name",
   "description": "Your app description",
-  "repository": "https://github.com/aamya2003/ahm7",
+  "repository": "https://github.com/aw-coode/awcr",
   "buildpacks": [
     {
       "url": "heroku/python"
